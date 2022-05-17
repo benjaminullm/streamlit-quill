@@ -7,7 +7,7 @@ import React, { useEffect, useRef } from "react"
 import ReactQuill from "react-quill"
 import ResizeObserver from "resize-observer-polyfill"
 import katex from "katex"
-
+import { ImageResize } from 'quill-image-resize-module';
 import "katex/dist/katex.min.css"
 import "quill/dist/quill.snow.css"
 
@@ -46,6 +46,7 @@ const Quill = ({ args }: QuillProps) => {
     <ReactQuill
       defaultValue={args.defaultValue}
       modules={{
+        ImageResize: {}
         toolbar: args.toolbar,
         history: args.history,
       }}
